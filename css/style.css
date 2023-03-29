@@ -1,0 +1,228 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #090909;
+    background: #FAFAFA;
+}
+
+a {
+    font-size: 1.125em;
+    text-decoration: none;
+    font-weight: 600;
+    color: #090909;
+}
+
+a:hover, 
+a:focus {
+    color: #505050;
+}
+
+.date { 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.view-link { display: flex; }
+
+.view-link a { margin: 0 auto 1em auto; }
+
+/* ~~~~~~ PROFILE ~~~~~~ */
+
+.profile-container {
+    margin: 1em;
+}
+
+.profile { 
+    height: 200px;
+    width: 200px;
+    margin-top: 15px;
+    border-radius: 50% ;
+    margin-right: 25px
+}
+
+
+/* ~~~~~~ NAV ~~~~~~ */
+
+nav { 
+    display: flex;
+    align-content: center;
+    margin: 1.25em 1.25em;
+    align-items: center;
+    
+}
+
+nav a { 
+    text-transform: uppercase;
+}
+
+i { font-size: 2.3em; }
+
+ul { 
+    list-style-type: none; 
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+li { margin: 0 8px; }
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125em;
+    margin: 0 0 0 10px;
+}
+
+h2 { 
+    font-size: 2.157em;
+    line-height: 45px;
+}
+
+/* ~~~~~ HERO CONTAINER ~~~~~*/
+
+.hero-container {
+    background-image: url("/images/nighttime.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: whitesmoke;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: start;
+}
+
+.hero-container .date { margin-left: 20px }
+
+.hero-container a {
+    color: whitesmoke;
+    margin: 20px;
+    max-width: 800px;
+}
+
+.hero-container h2 { 
+    margin: 0 5px 0 0;
+    font-size: 2.187em;
+    font-weight: 600;
+} 
+
+
+/* ~~~~~ MAIN ~~~~~*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1.5fr));
+}
+
+.main-article { margin: 1em; }
+.main-article img { width: 100%; }
+
+.blog { margin: 1em; }
+
+.blog img {
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.blog h2 { 
+    margin: 8px 0;
+    font-size: 1.562em;
+}
+
+.recent { margin-left: 0.5em }
+
+/* ~~~~~ FOOTER ~~~~~*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: #202020;
+    height: 105px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.75em;
+}
+
+p:first-child { 
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+@media (min-width: 650px) {
+
+    nav {
+        margin: 2em 2em;
+        font-size: 1.25em;
+    }
+
+    .hero-container .date,
+    .hero-container a {
+        text-shadow: 1px 1px 2px #090909, 0 0 1em #090909, 0 0 0.2em #090909;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+        margin: 0 auto;
+    }
+
+    .main-article {
+        margin: 0 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-article p,
+    .main-article h2,
+    .main-article h3 {
+        width: 65%;
+    }
+
+    .main-article p {
+        padding: 0 auto;
+    }
+
+    .main-article img {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .blog { margin: 1.75em; }
+
+    .blog img { height: 343px; }
+
+    footer p {
+        margin: 0;
+        font-size: 1.15em;
+    }
+
+    p:first-child { margin-top: 28px; }
+
+    .questions {
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        
+    }
+}
+
+@media (min-width: 950px) {
+    .recent-blogs {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .about-me {
+        display: flex;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+}
